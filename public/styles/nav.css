@@ -6,9 +6,11 @@
   top: 0;
   left: 0;
   right: 0;
+
 }
 
 #nav-bar .logo {
+
   width: 80px;
   height: 80px;
   float: left;
@@ -23,6 +25,6 @@
   padding-left: 10px;
   font-size: 200%;
   height: 80px;
-  vertical-align: middle;
+  line-height: 80px;
 
 }
