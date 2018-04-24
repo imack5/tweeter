@@ -36,14 +36,16 @@ article.tweet footer {
 
 }
 
-article.tweet footer .logo{
+article.tweet footer .images i{
   float:right;
   width: 20px;
   display: none;
+  color: #00a08778;
 }
 
-article.tweet:hover footer .logo{
-  display: block;
+article.tweet:hover footer .images i{
+
+  display: inline;
 }
 
 article.tweet div.tweet-content{
