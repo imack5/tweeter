@@ -1,0 +1,77 @@
+
+article.tweet {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-color: #80808061;
+  border-style: solid;
+  border-radius: 5px;
+  background: white;
+  border-width: 1px;
+  padding: 0em;
+  overflow: auto;
+
+}
+
+article.tweet header {
+  background: #8080801f;
+  padding: 0.5em;
+  overflow: auto;
+  opacity: 0.5;
+
+}
+
+article.tweet:hover header{
+  opacity: 1;
+}
+
+article.tweet footer {
+  margin: 0;
+  border-top-style: solid;
+  border-top-width: 1px;
+  background: white;
+  padding: 0.5em;
+  border-top-color: #80808029;
+
+}
+
+article.tweet footer .logo{
+  float:right;
+  width: 20px;
+  display: none;
+}
+
+article.tweet:hover footer .logo{
+  display: block;
+}
+
+article.tweet div.tweet-content{
+  padding: 1em;
+}
+
+article.tweet header .logo {
+  float: left;
+  height: 50px;
+}
+
+article.tweet header span {
+
+  padding-left: 10px;
+  height: 80px;
+  line-height: 80px;
+  height: 50px;
+  line-height: 1em;
+}
+
+article.tweet header .twitter-name{
+  float: left;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
+article.tweet header .twitter-id{
+  float: right;
+}
+
