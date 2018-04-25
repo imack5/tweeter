@@ -57,7 +57,13 @@ $( document).ready(function(){
 
   function renderTweets(tweets) {
       $('#tweets-container').empty();
-    for(let tweet in tweets){
+
+      var tweetsSortedByDate = tweets.sort(function(a, b){
+       return b.created_at - a.created_at;
+
+      });
+
+    for(let tweet in tweetsSortedByDate){
       $('#tweets-container').append(createTweetElement(tweets[tweet]));
     }
 
