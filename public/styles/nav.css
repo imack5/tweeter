@@ -27,3 +27,31 @@
   line-height: 80px;
 
 }
+
+#nav-bar .tweet-button {
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  float: right;
+  padding: 20px;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #00a087ba;
+  background: #e8fff8;
+  border-color: black;
+
+}
+
+#nav-bar .tweet-button:hover {
+
+  background: white;
+  color: black;
+}
+
+#nav-bar .tweet-button:hover ~ .container .new-tweet {
+  display: none;
+}
+
+

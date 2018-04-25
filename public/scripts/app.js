@@ -74,7 +74,7 @@ $( document).ready(function(){
     $.ajax({
       type: 'post',
       url: '/tweets/',
-      data: $(".new-tweet textarea").serialize()
+      data: $("#new-tweet textarea").serialize()
 
     })
       .then((data, status, jqXHR) => {
@@ -87,7 +87,7 @@ $( document).ready(function(){
         loadTweets();
     });
 
-    $('.new-tweet textarea').val('');
+    $('#new-tweet textarea').val('');
   }
 
   function loadTweets(){
@@ -107,14 +107,25 @@ $( document).ready(function(){
       });
   }
 
+  $("#nav-bar .tweet-button").on('click', function(){
+
+    if($(".container #new-tweet").attr('class') === 'hidden'){
+
+      $(".container #new-tweet").removeClass('hidden').addClass('shown');
+      $(".container #new-tweet form textarea").focus();
+    } else {
+      $(".container #new-tweet").removeClass('shown').addClass('hidden');
+    }
+  });
+
   $('.container form').on('submit', function(event){
     event.preventDefault();
 
-    if($(".new-tweet textarea").val().length <= 0){
+    if($("#new-tweet textarea").val().length <= 0){
 
       $(".container #inputCheck").text('Must have atleast one character in the tweet!');
 
-    } else if ($(".new-tweet textarea").val().length > 140){
+    } else if ($("#new-tweet textarea").val().length > 140){
 
       $(".container #inputCheck").text('Cannot have more than 140 characters in a tweet')
 

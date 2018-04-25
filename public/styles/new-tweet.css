@@ -1,4 +1,4 @@
-.new-tweet{
+#new-tweet{
   margin-left: 2em;
   margin-right: 2em;
   border-color: #80808061;
@@ -37,4 +37,12 @@
   color: red;
   opacity: 0.75;
 
+}
+
+.container .hidden{
+  display: none;
+}
+
+.container .shown{
+  display: block;
 }
