@@ -4,7 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
- function createTweetElement(tweet) {
+$( document).ready(function(){
+
+  function createTweetElement(tweet) {
 
    function timeSince(time){
      let timeElapsed = '';
@@ -50,21 +52,10 @@
    return $tweet;
  }
 
-
-$( document).ready(function(){
-
   loadTweets();
-
-
-
 
   function renderTweets(tweets) {
       $('#tweets-container').empty();
-
-      // var tweetsSortedByDate = tweets.sort(function(a, b){
-      //  return b.created_at - a.created_at;
-
-      // });
 
     for(let tweet in tweets){
       $('#tweets-container').prepend(createTweetElement(tweets[tweet]));
@@ -73,7 +64,6 @@ $( document).ready(function(){
   }
 
   function postTweet(){
-
     $.ajax({
       type: 'post',
       url: '/tweets/',
@@ -106,19 +96,18 @@ $( document).ready(function(){
       }
       return data;
     }).then(data => {
+      console.log(data);
       renderTweets(data);
     });
   }
 
   $("#nav-bar .tweet-button").on('click', function(){
-    $(".container #new-tweet").toggleClass("hidden")
-    // if($(".container #new-tweet").attr('class') === 'hidden'){
+    $(".container #new-tweet").toggleClass("hidden");
+    $(".container #new-tweet").toggleClass("shown");
 
-    //   $(".container #new-tweet").removeClass('hidden').addClass('shown');
-    //   $(".container #new-tweet form textarea").focus();
-    // } else {
-    //   $(".container #new-tweet").removeClass('shown').addClass('hidden');
-    // }
+    if($(".container #new-tweet").attr('class') === 'shown'){
+      $(".container #new-tweet form textarea").focus();
+    }
   });
 
   $('.container form').on('submit', function(event){
